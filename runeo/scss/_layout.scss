@@ -1,0 +1,73 @@
+// Roboto normal + bold
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import '_global';
+
+$fontFamily: "Roboto", Helvetica, Arial, sans-serif;
+$titleColor: #3C3C3C;
+$titleBackgroundColor: white;
+$backgroundColor: #F5F5F5;
+
+
+body {
+  min-height: 100vh;
+
+  color: $darkGrey;
+  font-family: $fontFamily;
+  background-color: $backgroundColor;
+  background-image: url("../images/ronds_rouge_fond.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+  .content {
+    padding-bottom: 230px;
+  }
+
+  .line {
+    max-width: 700px;
+    height: 60px;
+    margin: auto;
+  }
+
+  .titleContainer {
+    background-color: $titleBackgroundColor;
+  }
+
+  h1 {
+    color: $titleColor;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  select {
+    font-family: $fontFamily;
+  }
+}
+
+// checkbox
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #eee;
+
+  &:checked:after {
+    position: relative;
+    bottom: 3px;
+    left: 3px;
+    color: #85C3C1;
+    content: "\2713"; /* check mark */
+  }
+}
+

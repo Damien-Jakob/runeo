@@ -1,0 +1,147 @@
+@import '_global';
+
+// main menu
+$menuTextColor: #f5f5f5;
+$menuBackgroundColor: $darkGrey;
+
+// submenu
+$subMenuBackgroundColor: #1B1B1B;
+
+// submenu animation
+$dropdownHoverTextColor: $menuBackgroundColor;
+$dropdownHoverBackgroundColor: $menuTextColor;
+
+$logoHoverHeight: 46px;
+
+
+.navbar {
+  height: 65px;
+
+  background-color: $menuBackgroundColor;
+
+  .logoContainer {
+    height: $logoHoverHeight + 10;
+    width: $logoHoverHeight;
+  }
+
+  img {
+    // values for bounce animation
+    $bounceTiming: ease-in-out;
+    $bounceDuration: 0.6s;
+
+    transition: $bounceDuration/2 ease;
+
+    &.logo {
+      $height: 40px;
+      $hoverHeight: $logoHoverHeight;
+
+      height: $height;
+
+      &:hover {
+        height: $hoverHeight;
+
+        animation-name: bounceLogo;
+        animation-timing-function: $bounceTiming;
+        animation-duration: $bounceDuration;
+      }
+
+      @keyframes bounceLogo {
+        from {
+          height: $height;
+        }
+        50% {
+          height: $hoverHeight;
+        }
+        75% {
+          height: ($height + $hoverHeight) / 2;
+        }
+        to {
+          height: $hoverHeight;
+        }
+      }
+    }
+
+    &.menuIcon {
+      $height: 30px;
+      $hoverHeight: 36px;
+
+      height: $height;
+
+      &:hover {
+        height: $hoverHeight;
+
+        animation-name: bounceMenu;
+        animation-timing-function: $bounceTiming;
+        animation-duration: $bounceDuration;
+      }
+
+      @keyframes bounceMenu {
+        from {
+          height: $height;
+        }
+        50% {
+          height: $hoverHeight;
+        }
+        75% {
+          height: ($height + $hoverHeight) / 2;
+        }
+        to {
+          height: $hoverHeight;
+        }
+      }
+    }
+
+    &.user, &.search {
+      height: 20px;
+    }
+  }
+
+  .menuLink {
+    color: $menuTextColor;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .dropdown {
+    color: $menuTextColor;
+
+    .dropdown-menu {
+      width: 300px;
+
+      color: $menuTextColor;
+      background-color: $menuBackgroundColor;
+      border: none;
+      border-radius: 0px;
+    }
+
+    .dropdownTablet {
+      top: 0px;
+    }
+  }
+}
+
+.dropdown-item {
+  font-size: 20px;
+  font-weight: bold;
+
+  color: $menuTextColor;
+
+  &:hover, &:focus {
+    color: $dropdownHoverTextColor;
+    background-color: $dropdownHoverBackgroundColor;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .desktopNavItem {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .tabletNavItem {
+    display: none;
+  }
+}

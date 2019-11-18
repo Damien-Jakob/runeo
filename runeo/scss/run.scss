@@ -1,0 +1,121 @@
+@import '_global';
+
+$formColor: white;
+$labelColor: #B4B4B4;
+
+$sliderWidth: 700px;
+$formHeight: 280px;
+
+// icons
+.iconContainer {
+  $iconHeight: 30px;
+  $iconHoverHeight: 35px;
+
+  height: $iconHoverHeight;
+  width: $iconHoverHeight;
+
+  text-align: center;
+  vertical-align: middle;
+
+  .icon {
+    height: $iconHeight;
+
+    &.link {
+      &:hover {
+        height: $iconHoverHeight;
+      }
+    }
+  }
+
+  i {
+    font-size: $iconHeight;
+    display: block;
+    margin: auto;
+
+    &:hover {
+      font-size: $iconHoverHeight;
+    }
+  }
+}
+
+
+// slider
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  max-width: $sliderWidth;
+  margin: auto;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #2f4f4f;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+
+  .tableContainer {
+    height: $formHeight;
+  }
+
+}
+
+.slide {
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.runPart {
+  max-width: $sliderWidth;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+// table
+.tableContainer {
+  background-color: $formColor;
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+  table {
+    width: 100%;
+
+    td:first-child {
+      width: 130px;
+    }
+
+    td {
+      padding: 10px;
+
+      select {
+        height: 30px;
+        width: 100%;
+        margin: auto;
+      }
+
+    }
+
+    label {
+      width: 100%;
+      margin: auto;
+
+      color: $labelColor;
+      text-align: right;
+    }
+  }
+}
+

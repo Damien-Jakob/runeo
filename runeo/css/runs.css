@@ -1,0 +1,55 @@
+.search {
+  height: 30px; }
+
+.filtersTitleRow {
+  background-color: #414141; }
+  .filtersTitleRow .filtersTitleContainer {
+    margin: auto;
+    width: 700px; }
+  .filtersTitleRow .filtersText {
+    color: white; }
+
+.arrowDown {
+  display: inline-block;
+  position: relative;
+  height: 9px;
+  width: 10px;
+  margin-bottom: 8px;
+  background: white; }
+  .arrowDown:after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: -4px;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+    border-top: 9px solid; }
+
+.filtersContainer {
+  color: white;
+  background-color: #707070; }
+
+.filters {
+  max-width: 700px;
+  margin: auto; }
+
+.tableContainer {
+  max-width: 750px;
+  margin: auto; }
+  .tableContainer thead {
+    color: white;
+    background-color: #C4C4C4;
+    font-size: 18px;
+    font-weight: bold; }
+  .tableContainer td {
+    color: #414141;
+    background-color: white; }
+    .tableContainer td .groupName {
+      color: #EE5353;
+      font-weight: bold; }
+      .tableContainer td .groupName:hover {
+        color: #e462ee; }
+    .tableContainer td .date {
+      font-weight: bold; }
+
+/*# sourceMappingURL=runs.css.map */

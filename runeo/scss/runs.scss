@@ -1,0 +1,101 @@
+@import '_global';
+
+// filters
+$filtersTextColor: white;
+$filterTitleBackgroundColor: $darkGrey;
+$filterBackgroundColor: #707070;
+
+// table of runs
+$tableHeaderTextColor: white;
+$tableCellColor: white;
+$tableHeaderBackgroundColor: #C4C4C4;
+$groupNameColor: #EE5353;
+$groupNameHoverColor: #e462ee;
+
+// search
+.search {
+  height: 30px;
+}
+
+// filters
+.filtersTitleRow {
+  background-color: $filterTitleBackgroundColor;
+
+  .filtersTitleContainer {
+    margin: auto;
+    width: 700px;
+  }
+
+  .filtersText {
+    color: $filtersTextColor;
+  }
+}
+
+.arrowDown {
+  $height: 18px;
+  $headSize: $height / 2;
+  $tailWidth: 10px;
+  $tailHeight: $height - $headSize;
+
+  display: inline-block;
+  position: relative;
+
+  height: $tailHeight;
+  width: $tailWidth;
+
+  margin-bottom: $headSize - 1;
+
+  background: $filtersTextColor;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -$headSize + 1;
+    left: ($tailWidth / 2) - $headSize;
+
+    border-right: $headSize solid transparent;
+    border-left: $headSize solid transparent;
+    border-top: $headSize solid;
+  }
+}
+
+.filtersContainer {
+  color: $filtersTextColor;
+  background-color: $filterBackgroundColor;
+}
+
+.filters {
+  max-width: 700px;
+  margin: auto;
+}
+
+// table
+.tableContainer {
+  max-width: 750px;
+  margin: auto;
+
+  thead {
+    color: $tableHeaderTextColor;
+    background-color: $tableHeaderBackgroundColor;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  td {
+    color: $filterTitleBackgroundColor;
+    background-color: $tableCellColor;
+
+    .groupName {
+      color: $groupNameColor;
+      font-weight: bold;
+
+      &:hover {
+        color: $groupNameHoverColor;
+      }
+    }
+
+    .date {
+      font-weight: bold;
+    }
+  }
+}

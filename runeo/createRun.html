@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Create Run</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous">
+
+    <!-- Custom -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/run.css">
+</head>
+
+<body>
+
+<!-- Navigation : Home + Menu  -->
+<nav class="navbar navbar-expand-sm p-0">
+
+    <!-- right -->
+    <div class="navbar-collapse collapse mr-auto">
+        <div class="navbar-nav mr-auto">
+            <div class="nav-item ml-2 mr-4">
+                <div class="logoContainer my-auto">
+                    <a class="nav-link menuLink" href="runs.html">
+                        <img src="images/logo_runeo_white.svg" class="logo align-middle" alt="home">
+                    </a>
+                </div>
+            </div>
+            <div class="desktopNavItem dropdown my-auto">
+                <a id="dropdownDesktopLabel" class="dropdown-item nav-link menuLink" data-toggle="dropdown"
+                   aria-haspopup="true"
+                   aria-expanded="false" href="#">
+                    <div class="mx-2">
+                        Runs
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdownDesktop" aria-labelledby="dropdownDesktopLabel">
+                    <a class="dropdown-item" href="createRun.html">Créer</a>
+                    <a class="dropdown-item" href="runs.html">Liste des runs</a>
+                    <a class="dropdown-item" href="#">Lieux de passage</a>
+                    <a class="dropdown-item" href="#">Grand affichage</a>
+                </div>
+            </div>
+
+            <div class="nav-item desktopNavItem mx-2 my-auto">
+                <a class="dropdown-item" href="#">
+                    Véhicules
+                </a>
+            </div>
+            <div class="nav-item desktopNavItem mx-2 my-auto">
+                <a class="dropdown-item" href="#">
+                    Chauffeurs
+                </a>
+            </div>
+            <div class="nav-item desktopNavItem mx-2 my-auto">
+                <a class="dropdown-item" href="#">
+                    Groupes
+                </a>
+            </div>
+            <div class="nav-item desktopNavItem mx-2 my-auto">
+                <a class="dropdown-item" href="#">
+                    Horaires
+                </a>
+            </div>
+            <div class="nav-item desktopNavItem mx-2 my-auto">
+                <a class="dropdown-item" href="#">
+                    Kiéla
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- left -->
+    <div class="navbar-collapse collapse">
+        <div class="navbar-nav justify-content-end d-flex flex-fill">
+            <div class="nav-item desktopNavItem pr-2">
+                <a class="dropdown-item" href="#">
+                    <div>
+                        Roland
+                        <img src="images/user.svg" class="user ml-2" alt="user">
+                    </div>
+                </a>
+            </div>
+            <div class="tabletNavItem dropdown px-3">
+                <a id="dropdownLabel" class="nav-link menuLink" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false" href="#">
+                    <div class="d-flex">
+                        <img src="images/hamburger.svg" class="menuIcon align-middle" alt="menu">
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdownTablet mt-0 pt-0" aria-labelledby="dropdownLabel">
+                    <a class="dropdown-item user" href="#">
+                        <div class="container-fluid px-0 pb-5 pt-2">
+                            <div class="row">
+                                <div class="col-6">Roland</div>
+                                <div class="col-6 d-flex justify-content-end">
+                                    <img src="images/user.svg" class="user" alt="user">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="dropdown">
+                        <form>
+                            <a class="dropdown-item" data-toggle="collapse" href="#subMenu" role="button"
+                               aria-expanded="false"
+                               aria-controls="filtersForm">
+                                Runs
+                            </a>
+                        </form>
+                        <div class="collapse" id="subMenu">
+                            <a class="dropdown-item ml-2" href="createRun.html">Créer</a>
+                            <a class="dropdown-item ml-2" href="runs.html">Liste des runs</a>
+                            <a class="dropdown-item ml-2" href="#">Lieux de passage</a>
+                            <a class="dropdown-item ml-2" href="#">Grand Affichage</a>
+                        </div>
+                    </div>
+
+                    <a class="dropdown-item" href="#">Véhicules</a>
+                    <a class="dropdown-item" href="#">Chauffeurs</a>
+                    <a class="dropdown-item" href="#">Groupes</a>
+                    <a class="dropdown-item" href="#">Horaires</a>
+                    <a class="dropdown-item" href="#">Kiéla</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- content -->
+<div class="content">
+    <div class="container-fluid">
+        <!-- Title + save -->
+        <div class="row titleContainer">
+            <div class="container-fluid">
+                <div class="row line">
+                    <h1 class="col-6 my-auto">Création d'un run</h1>
+                    <div class="col-6 d-flex justify-content-end my-auto">
+                        <div class="iconContainer">
+                            <a href="run.html">
+                                <img src="images/floppy.svg" class="icon link" alt="save">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- slider-->
+        <div class="row slider">
+            <!-- General informations -->
+            <div class="slide" id="generalInformation">
+                <!-- Form title + navigation -->
+                <div class="row py-2 line">
+                    <h1 class="col-6 my-auto">
+                        <img src="images/calendar.svg" class="icon mr-2" alt="info">
+                        Informations générales
+                    </h1>
+                    <div class="col-6 d-flex justify-content-end my-auto">
+                        <div class="iconContainer">
+                            <a href="#generalInformation">
+                                <img src="images/calendar_light.svg" class="icon link" alt="informations générales">
+                            </a>
+                        </div>
+                        <div class="iconContainer ml-4">
+                            <a class="" href="#passage">
+                                <img src="images/mapmarker_light.svg" class="icon link" alt="lieux de passage">
+                            </a>
+                        </div>
+                        <div class="iconContainer ml-4">
+                            <a class="" href="#runners">
+                                <img src="images/steering_wheel_light.svg" class="icon link" alt="runners">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- General informations -->
+                <div class="tableContainer">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="artist">Artiste</label>
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" id="artist" value="Radiohead">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="passengers">Passagers</label>
+                            </td>
+                            <td>
+                                <div class="container-fluid px-0">
+                                    <div class="row">
+                                        <div class="col-8 d-flex align-middle">
+                                            <input class="form-control" type="number" id="passengers" value="7">
+                                        </div>
+                                        <div class="col-4 d-flex align-middle">
+                                            <label class="my-auto" for="confirmPassengers">
+                                                A confirmer
+                                            </label>
+                                            <input class="mr-3 ml-2 my-auto" type="checkbox" id="confirmPassengers" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="departure">Départ prévu à</label>
+                            </td>
+                            <td>
+                                <div class="container-fluid px-0">
+                                    <div class="row">
+                                        <div class="col-8 d-flex align-middle">
+                                            <input class="form-control" type="datetime-local" id="departure" value="2018-06-12T19:30">
+                                        </div>
+                                        <div class="col-4 d-flex align-middle">
+                                            <label class="my-auto" for="confirmDeparture">
+                                                A confirmer
+                                            </label>
+                                            <input class="my-auto mr-3 ml-2" type="checkbox" id="confirmDeparture">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="info">Informations</label>
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" id="info"
+                                       value="Une voiture électrique si possible">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Passage -->
+            <div class="slide" id="passage">
+                <!-- Form title + navigation -->
+                <div class="row py-2 line">
+                    <h1 class="col-6 my-auto">
+                        <img src="images/mapmarker_light.svg" class="icon mr-2" alt="passage">
+                        Lieux de passage
+                    </h1>
+                    <div class="col-6 d-flex justify-content-end my-auto">
+                        <div class="iconContainer">
+                            <a href="#generalInformation">
+                                <img src="images/calendar_light.svg" class="icon link" alt="informations générales">
+                            </a>
+                        </div>
+                        <div class="iconContainer ml-4">
+                            <a class="" href="#passage">
+                                <img src="images/mapmarker_light.svg" class="icon link" alt="lieux de passage">
+                            </a>
+                        </div>
+                        <div class="iconContainer ml-4">
+                            <a class="" href="#runners">
+                                <img src="images/steering_wheel_light.svg" class="icon link" alt="runners">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Passage -->
+                <div class="tableContainer">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="depart">Départ</label>
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" id="depart" value="Genève aéroport">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="arrivee">Arrivée</label>
+                            </td>
+                            <td>
+                                <div class="container-fluid px-0">
+                                    <div class="row">
+                                        <div class="col-10 d-flex align-middle">
+                                            <input class="form-control" type="text" id="arrivee" value="Nyon">
+                                        </div>
+                                        <div class="col-2 d-flex align-content-center justify-content-end">
+                                            <div class="iconContainer">
+                                                <img class="icon link" src="images/add.svg" alt="ajouter">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="tempsEstime">Temps estimé</label>
+                            </td>
+                            <td>
+                                <input class="form-control" type="time" id="tempsEstime" value="02:30">
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- Runners -->
+            <div class="slide" id="runners">
+                <!-- Form title + navigation -->
+                <div class="row py-2 line">
+                    <h1 class="col-6 my-auto">
+                        <img src="images/steering_wheel.svg" class="icon mr-2" alt="runners">
+                        Runners
+                    </h1>
+                    <div class="col-6 d-flex justify-content-end my-auto">
+                        <div class="iconContainer">
+                            <a href="#generalInformation">
+                                <img src="images/calendar_light.svg" class="icon link" alt="informations générales">
+                            </a>
+                        </div>
+                        <div class="iconContainer ml-4">
+                            <a class="" href="#passage">
+                                <img src="images/mapmarker_light.svg" class="icon link" alt="lieux de passage">
+                            </a>
+                        </div>
+                        <div class="iconContainer ml-4">
+                            <a class="" href="#runners">
+                                <img src="images/steering_wheel_light.svg" class="icon link" alt="runners">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Runners -->
+                <div class="tableContainer">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="runner1">Runner 1</label>
+                            </td>
+                            <td>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-10 d-flex align-middle">
+                                            <select id="runner1">
+                                                <option value="runner1">Bob</option>
+                                                <option value="runner2" selected>Roland</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-2 d-flex align-content-center justify-content-end">
+                                            <div class="iconContainer">
+                                                <i class="fas fa-minus-square"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="vehicule1">Véhicule</label>
+                            </td>
+                            <td>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col d-flex align-middle">
+                                            <select id="type1">
+                                                <option value="type1" selected>Type 1</option>
+                                                <option value="type1">Type 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="col d-flex align-middle">
+                                            <select id="vehicule1">
+                                                <option value="vehicle1">Véhicule A</option>
+                                                <option value="vehicle1" selected>Véhicule B</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="runner2">Runner 2</label>
+                            </td>
+                            <td>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-10 d-flex align-middle">
+                                            <select id="runner2">
+                                                <option value="runner1" selected>Bob</option>
+                                                <option value="runner2">Roland</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-2 d-flex align-content-center justify-content-end">
+                                            <div class="iconContainer">
+                                                <i class="fas fa-minus-square"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="vehicule2">Véhicule</label>
+                            </td>
+                            <td>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col d-flex align-middle">
+                                            <select id="type2">
+                                                <option value="type1">Type 1</option>
+                                                <option value="type1" selected>Type 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="col d-flex align-middle">
+                                            <select id="vehicule2">
+                                                <option value="vehicle1">Véhicule C</option>
+                                                <option value="vehicle1" selected>Véhicule D</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col d-flex align-content-center justify-content-end">
+                                            <div class="iconContainer">
+                                                <img class="icon link" src="images/add.svg" alt="ajouter">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Footer  -->
+<div class="container-fluid footer">
+    <div class="row footerContent">
+        <div class="col-3 footerLeftCol">
+            <a class="nav-link footerLink" href="runs.html">Runs</a>
+            <a class="nav-link footerLink" href="createRun.html">Créer</a>
+            <a class="nav-link footerLink" href="#">Lieux de passage</a>
+        </div>
+        <div class="col-3 footerLeftCol">
+            <a class="nav-link footerLink" href="#">Véhicules</a>
+            <a class="nav-link footerLink" href="#">Chauffeurs</a>
+        </div>
+        <div class="col-3 footerLeftCol">
+            <a class="nav-link footerLink" href="#">Groupes</a>
+            <a class="nav-link footerLink" href="#">Listes</a>
+            <a class="nav-link footerLink" href="#">Membres</a>
+        </div>
+        <div class="col-3">
+            <a class="nav-link footerLink" href="#">Horaires</a>
+            <a class="nav-link footerLink" href="createRun.html">Kiéla</a>
+            <a class="nav-link footerLink" href="#">Artistes</a>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

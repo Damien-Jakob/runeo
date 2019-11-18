@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Runs </title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous">
+
+    <!-- Custom -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/runs.css">
+</head>
+
+<body>
+<!-- Navigation : Home + Menu  -->
+<nav class="navbar navbar-expand-sm p-0">
+
+    <!-- right -->
+    <div class="navbar-collapse collapse mr-auto">
+        <div class="navbar-nav mr-auto">
+            <div class="nav-item ml-2 mr-4">
+                <div class="logoContainer my-auto">
+                    <a class="nav-link menuLink" href="runs.html">
+                        <img src="images/logo_runeo_white.svg" class="logo align-middle" alt="home">
+                    </a>
+                </div>
+            </div>
+            <div class="desktopNavItem dropdown my-auto">
+                <a id="dropdownDesktopLabel" class="dropdown-item nav-link menuLink" data-toggle="dropdown"
+                   aria-haspopup="true"
+                   aria-expanded="false" href="#">
+                    <div class="mx-2">
+                        Runs
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdownDesktop" aria-labelledby="dropdownDesktopLabel">
+                    <a class="dropdown-item" href="createRun.html">Créer</a>
+                    <a class="dropdown-item" href="runs.html">Liste des runs</a>
+                    <a class="dropdown-item" href="#">Lieux de passage</a>
+                    <a class="dropdown-item" href="#">Grand affichage</a>
+                </div>
+            </div>
+
+            <div class="nav-item desktopNavItem mx-2 my-auto">
+                <a class="dropdown-item" href="#">
+                    Véhicules
+                </a>
+            </div>
+            <div class="nav-item desktopNavItem mx-2 my-auto">
+                <a class="dropdown-item" href="#">
+                    Chauffeurs
+                </a>
+            </div>
+            <div class="nav-item desktopNavItem mx-2 my-auto">
+                <a class="dropdown-item" href="#">
+                    Groupes
+                </a>
+            </div>
+            <div class="nav-item desktopNavItem mx-2 my-auto">
+                <a class="dropdown-item" href="#">
+                    Horaires
+                </a>
+            </div>
+            <div class="nav-item desktopNavItem mx-2 my-auto">
+                <a class="dropdown-item" href="#">
+                    Kiéla
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- left -->
+    <div class="navbar-collapse collapse">
+        <div class="navbar-nav justify-content-end d-flex flex-fill">
+            <div class="nav-item desktopNavItem pr-2">
+                <a class="dropdown-item" href="#">
+                    <div>
+                        Roland
+                        <img src="images/user.svg" class="user ml-2" alt="user">
+                    </div>
+                </a>
+            </div>
+            <div class="tabletNavItem dropdown px-3">
+                <a id="dropdownLabel" class="nav-link menuLink" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false" href="#">
+                    <div class="d-flex">
+                        <img src="images/hamburger.svg" class="menuIcon align-middle" alt="menu">
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdownTablet mt-0 pt-0" aria-labelledby="dropdownLabel">
+                    <a class="dropdown-item user" href="#">
+                        <div class="container-fluid px-0 pb-5 pt-2">
+                            <div class="row">
+                                <div class="col-6">Roland</div>
+                                <div class="col-6 d-flex justify-content-end">
+                                    <img src="images/user.svg" class="user" alt="user">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="dropdown">
+                        <form>
+                            <a class="dropdown-item" data-toggle="collapse" href="#subMenu" role="button"
+                               aria-expanded="false"
+                               aria-controls="filtersForm">
+                                Runs
+                            </a>
+                        </form>
+                        <div class="collapse" id="subMenu">
+                            <a class="dropdown-item ml-2" href="createRun.html">Créer</a>
+                            <a class="dropdown-item ml-2" href="runs.html">Liste des runs</a>
+                            <a class="dropdown-item ml-2" href="#">Lieux de passage</a>
+                            <a class="dropdown-item ml-2" href="#">Grand Affichage</a>
+                        </div>
+                    </div>
+
+                    <a class="dropdown-item" href="#">Véhicules</a>
+                    <a class="dropdown-item" href="#">Chauffeurs</a>
+                    <a class="dropdown-item" href="#">Groupes</a>
+                    <a class="dropdown-item" href="#">Horaires</a>
+                    <a class="dropdown-item" href="#">Kiéla</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Content -->
+<div class="container-fluid content">
+    <!-- Title + Search  -->
+    <div class="row titleContainer">
+        <div class="container-fluid">
+            <div class="row line">
+                <h1 class="col-6 my-auto">Liste des runs</h1>
+                <form class="col-6 justify-content-end form-inline my-auto md-form">
+                    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Recherche"
+                           aria-label="Search">
+                    <img src="images/search.svg" class="search" alt="search">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filters  -->
+    <!-- Filters  title -->
+    <a data-toggle="collapse" href="#filtersForm" role="button" aria-expanded="false" aria-controls="filtersForm">
+        <div class="row text-white py-3 filtersTitleRow">
+            <div class="filtersTitleContainer">
+                <h1 class="col-12 my-auto filtersText">
+                    <i class="fas fa-list"></i>
+                    <span class="ml-2">Filtres</span>
+                    <div class="arrowDown ml-3"></div>
+                </h1>
+            </div>
+        </div>
+    </a>
+
+    <!-- Filters  content -->
+    <div class="collapse row filtersContainer pr-5 pl-0 py-2" id="filtersForm">
+        <div class="col container-fluid">
+            <div class="row filters">
+                <div class="col container-fluid">
+                    <div class="row align-items-center justify-content-end">
+                        <label class="my-1" for="brouillon">
+                            Brouillon
+                        </label>
+                        <input class="mr-3 ml-2" type="checkbox" id="brouillon">
+                    </div>
+                    <div class="row align-items-center justify-content-end">
+                        <label class="my-1" for="enRoute">
+                            En route
+                        </label>
+                        <input class="mr-3 ml-2" type="checkbox" id="enRoute">
+                    </div>
+                    <div class="row align-items-center justify-content-end">
+                        <label class="my-1" for="perso">
+                            Perso
+                        </label>
+                        <input class="mr-3 ml-2" type="checkbox" id="perso" checked>
+                    </div>
+                </div>
+                <div class="col container-fluid">
+                    <div class="row align-items-center justify-content-end">
+                        <label class="my-1" for="preparation">
+                            Préparation
+                        </label>
+                        <input class="mr-3 ml-2" type="checkbox" id="preparation">
+                    </div>
+                    <div class="row align-items-center justify-content-end">
+                        <label class="my-1" for="termine">
+                            Terminé
+                        </label>
+                        <input class="mr-3 ml-2" type="checkbox" id="termine">
+                    </div>
+                    <div class="row align-items-center justify-content-end">
+                        <label class="my-1" for="tout">
+                            Tout
+                        </label>
+                        <input class="mr-3 ml-2" type="checkbox" id="tout">
+                    </div>
+                </div>
+                <div class="col container-fluid">
+                    <div class="row align-items-center justify-content-end">
+                        <label class="my-1" for="ouvert">
+                            Ouvert
+                        </label>
+                        <input class="mr-3 ml-2" type="checkbox" id="ouvert" checked>
+                    </div>
+                    <div class="row align-items-center justify-content-end">
+                        <label class="my-1" for="erreur">
+                            Erreur
+                        </label>
+                        <input class="mr-3 ml-2" type="checkbox" id="erreur">
+                    </div>
+                    <div class="row align-items-center justify-content-end">
+                        <label class="my-1" for="rien">
+                            Rien
+                        </label>
+                        <input class="mr-3 ml-2" type="checkbox" id="rien">
+                    </div>
+                </div>
+                <div class="col container-fluid">
+                    <div class="row align-items-center justify-content-end">
+                        <label class="my-1" for="presque">
+                            Presque
+                        </label>
+                        <input class="mr-3 ml-2" type="checkbox" id="presque">
+                    </div>
+                    <div class="row align-items-center justify-content-end">
+                        <label class="my-1" for="annule">
+                            Annulé
+                        </label>
+                        <input class="mr-3 ml-2" type="checkbox" id="annule">
+                    </div>
+                </div>
+                <div class="col container-fluid">
+                    <div class="row align-items-center justify-content-end">
+                        <label class="my-1" for="pret">
+                            Prêt
+                        </label>
+                        <input class="mr-3 ml-2" type="checkbox" id="pret">
+                    </div>
+                    <div class="row align-items-center justify-content-end">
+                        <label class="my-1" for="brouillon2">
+                            Brouillon
+                        </label>
+                        <input class="mr-3 ml-2" type="checkbox" id="brouillon2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results  -->
+    <div class="row tableContainer">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">
+                    <div class="ml-5">Nom<br>Nb pax</div>
+                </th>
+                <th scope="col">
+                    <div class="ml-2">Parcours<br>Heure</div>
+                </th>
+                <th scope="col">
+                    <div class="ml-2">Voiture<br>Chauffeur</div>
+                </th>
+                <th scope="col">
+                    <div class="ml-2">Statut<br>Action</div>
+                </th>
+            </tr>
+            <tbody>
+
+            <tr>
+                <td>
+                    <div class="container">
+                        <a href="run.html">
+                            <div class="row groupName">
+                                Radiohead 1234
+                            </div>
+                        </a>
+                        <div class="row">
+                            2pax
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Genève aéroprt -><br>
+                            Hotel de la gare de Nyon-><br>
+                            Scène les arches
+                        </div>
+                        <div class="row date">
+                            Mardi 16 à 16:45
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Vito 01 / Paul C
+                        </div>
+                        <div class="row">
+                            Vito 09 / Roland
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Ouvert
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="container">
+                        <a href="run.html">
+                            <div class="row groupName">
+                                Adèle
+                            </div>
+                        </a>
+                        <div class="row">
+                            2pax
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Genève aéroprt -><br>
+                            Hotel de la gare de Nyon-><br>
+                            Scène les arches
+                        </div>
+                        <div class="row date">
+                            Mardi 16 à 16:45
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Vito 01 / Paul C
+                        </div>
+                        <div class="row">
+                            Vito 09 / Roland
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Terminé
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="container">
+                        <a href="run.html">
+                            <div class="row groupName">
+                                Quenns of the stone age
+                            </div>
+                        </a>
+                        <div class="row">
+                            2pax
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Genève aéroprt -><br>
+                            Hotel de la gare de Nyon-><br>
+                            Scène les arches
+                        </div>
+                        <div class="row date">
+                            Mardi 16 à 16:45
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Vito 01 / Paul C
+                        </div>
+                        <div class="row">
+                            Vito 09 / Roland
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Ouvert
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="container">
+                        <a href="run.html">
+                            <div class="row groupName">
+                                Radiohead
+                            </div>
+                        </a>
+                        <div class="row">
+                            2pax
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Genève aéroprt -><br>
+                            Hotel de la gare de Nyon-><br>
+                            Scène les arches
+                        </div>
+                        <div class="row date">
+                            Mardi 16 à 16:45
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Vito 01 / Paul C
+                        </div>
+                        <div class="row">
+                            Vito 09 / Roland
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Ouvert
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="container">
+                        <a href="run.html">
+                            <div class="row groupName">
+                                Radiohead
+                            </div>
+                        </a>
+                        <div class="row">
+                            2pax
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Genève aéroprt -><br>
+                            Hotel de la gare de Nyon-><br>
+                            Scène les arches
+                        </div>
+                        <div class="row date">
+                            Mardi 16 à 16:45
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Vito 01 / Paul C
+                        </div>
+                        <div class="row">
+                            Vito 09 / Roland
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Ouvert
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="container">
+                        <a href="run.html">
+                            <div class="row groupName">
+                                Radiohead
+                            </div>
+                        </a>
+                        <div class="row">
+                            2pax
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Genève aéroprt -><br>
+                            Hotel de la gare de Nyon-><br>
+                            Scène les arches
+                        </div>
+                        <div class="row date">
+                            Mardi 16 à 16:45
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Vito 01 / Paul C
+                        </div>
+                        <div class="row">
+                            Vito 09 / Roland
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="row">
+                            Ouvert
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            </tbody>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<!-- Footer  -->
+<div class="container-fluid footer">
+    <div class="row footerContent">
+        <div class="col-3 footerLeftCol">
+            <a class="nav-link footerLink" href="runs.html">Runs</a>
+            <a class="nav-link footerLink" href="createRun.html">Créer</a>
+            <a class="nav-link footerLink" href="#">Lieux de passage</a>
+        </div>
+        <div class="col-3 footerLeftCol">
+            <a class="nav-link footerLink" href="#">Véhicules</a>
+            <a class="nav-link footerLink" href="#">Chauffeurs</a>
+        </div>
+        <div class="col-3 footerLeftCol">
+            <a class="nav-link footerLink" href="#">Groupes</a>
+            <a class="nav-link footerLink" href="#">Listes</a>
+            <a class="nav-link footerLink" href="#">Membres</a>
+        </div>
+        <div class="col-3">
+            <a class="nav-link footerLink" href="#">Horaires</a>
+            <a class="nav-link footerLink" href="createRun.html">Kiéla</a>
+            <a class="nav-link footerLink" href="#">Artistes</a>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+.iconContainer {
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  vertical-align: middle; }
+  .iconContainer .icon {
+    height: 30px; }
+    .iconContainer .icon.link:hover {
+      height: 35px; }
+  .iconContainer i {
+    font-size: 30px;
+    display: block;
+    margin: auto; }
+    .iconContainer i:hover {
+      font-size: 35px; }
+
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  max-width: 700px;
+  margin: auto; }
+  .slider::-webkit-scrollbar {
+    width: 10px;
+    height: 10px; }
+  .slider::-webkit-scrollbar-thumb {
+    background: #2f4f4f;
+    border-radius: 10px; }
+  .slider::-webkit-scrollbar-track {
+    background: transparent; }
+  .slider .tableContainer {
+    height: 280px; }
+
+.slide {
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%; }
+
+.runPart {
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 10px; }
+
+.tableContainer {
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 20px; }
+  .tableContainer table {
+    width: 100%; }
+    .tableContainer table td:first-child {
+      width: 130px; }
+    .tableContainer table td {
+      padding: 10px; }
+      .tableContainer table td select {
+        height: 30px;
+        width: 100%;
+        margin: auto; }
+    .tableContainer table label {
+      width: 100%;
+      margin: auto;
+      color: #B4B4B4;
+      text-align: right; }
+
+/*# sourceMappingURL=run.css.map */

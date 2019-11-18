@@ -1,0 +1,37 @@
+@import '_global';
+
+$footerTextColor: #F5F5F5;
+$footerBackgroundColor: $darkGrey;
+
+// animation
+$footerHoverColor: #CDCDCD;
+
+.footer {
+  clear: both;
+  position: fixed;
+  bottom: 0;
+  background-color: $footerBackgroundColor;
+
+  padding-bottom: 50px;
+  padding-top: 30px;
+
+  .footerContent {
+    max-width: 700px;
+    margin: auto;
+
+    .footerLink {
+      color: $footerTextColor;
+      padding: 10px 5px;
+
+      &:hover {
+        color: $footerHoverColor;
+      }
+    }
+
+    .footerLeftCol {
+      border-color: $footerTextColor;
+      border-right-style: dashed;
+      border-width: 1px;
+    }
+  }
+}
