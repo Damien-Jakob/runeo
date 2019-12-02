@@ -1,5 +1,8 @@
 @import '_global';
 
+// text
+$fontSize: 20px;
+
 // main menu
 $menuTextColor: #f5f5f5;
 $menuBackgroundColor: $darkGrey;
@@ -10,18 +13,25 @@ $subMenuBackgroundColor: #1B1B1B;
 nav {
   background-color: $menuBackgroundColor;
 
-  li {
-    padding: 0px 20px;
+  .text-container {
+    padding: 0px 10px;
   }
+
   .text-link {
-    font-size: 20px;
+    font-size: $fontSize;
     font-weight: bold;
 
     color: $menuTextColor;
+
+    img {
+      margin-left: 20px;
+    }
 
     &:hover {
       color: $menuBackgroundColor;
       background-color: $menuTextColor;
     }
+
+
   }
 }

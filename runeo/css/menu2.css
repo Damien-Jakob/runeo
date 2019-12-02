@@ -1,11 +1,13 @@
 nav {
   background-color: #414141; }
-  nav li {
-    padding: 0px 20px; }
+  nav .text-container {
+    padding: 0px 10px; }
   nav .text-link {
     font-size: 20px;
     font-weight: bold;
     color: #f5f5f5; }
+    nav .text-link img {
+      margin-left: 20px; }
     nav .text-link:hover {
       color: #414141;
       background-color: #f5f5f5; }
