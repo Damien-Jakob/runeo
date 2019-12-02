@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="374a3aca-3653-4fd4-b60c-0c930ec260fb" name="Default Changelist" comment="" />
+    <list default="true" id="374a3aca-3653-4fd4-b60c-0c930ec260fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/runeo/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +22,9 @@
         <option value="SCSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SpNXxvCboAxOtpxwJFI9lluPma" />
   <component name="PropertiesComponent">
@@ -90,10 +96,22 @@
       <workItem from="1573626245867" duration="1606000" />
       <workItem from="1573648200809" duration="78000" />
       <workItem from="1574060506474" duration="159000" />
+      <workItem from="1575305825088" duration="291000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
