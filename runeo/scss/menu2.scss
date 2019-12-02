@@ -1,5 +1,9 @@
-// TODO menu icon animation
-// TODO tablet mode
+// TODO font format in tablet mode
+// TODO user appearance in tablet mode
+// TODO remove useless clazz in tablet mode
+// TODO correct position of tablet menu
+// TODO repair dropdown dezktop
+// TODO menu icons animation
 
 @import '_global';
 
@@ -10,29 +14,26 @@ $fontSize: 20px;
 $menuTextColor: #f5f5f5;
 $menuBackgroundColor: $darkGrey;
 
-// submenu
-$subMenuBackgroundColor: #1B1B1B;
-
 nav {
   background-color: $menuBackgroundColor;
 
   .text-container {
     padding: 0px 10px;
+  }
 
-    .text-link {
-      font-size: $fontSize;
-      font-weight: bold;
+  .text-link {
+    font-size: $fontSize;
+    font-weight: bold;
 
-      color: $menuTextColor;
+    color: $menuTextColor;
 
-      img {
-        margin-left: 20px;
-      }
+    img {
+      margin-left: 20px;
+    }
 
-      &:hover {
-        color: $menuBackgroundColor;
-        background-color: $menuTextColor;
-      }
+    &:hover {
+      color: $menuBackgroundColor;
+      background-color: $menuTextColor;
     }
   }
 
@@ -44,4 +45,12 @@ nav {
     border: none;
     border-radius: 0px;
   }
+
+  // Hide the tablet menu when in desktop mode
+  .tabletMenu {
+    @media only screen and (min-width: $tabletLimit) {
+      display: none;
+    }
+  }
 }
+

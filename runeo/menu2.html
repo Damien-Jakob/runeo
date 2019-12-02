@@ -26,22 +26,17 @@
             <img src="images/logo_runeo_white.svg" class="logo align-middle" alt="home">
         </a>
 
-        <!-- Menu button in tablet mode -->
-        <button class="navbar-toggler text-link" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <img src="images/hamburger.svg" class="" alt="menu">
-        </button>
-
-        <!-- Menu -->
+        <!-- Desktop Menu -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav">
                 <!-- Dropdown -->
                 <li class="nav-item dropdown text-container">
-                    <a class="nav-link dropdown-toggle text-link" href="#" id="navbarDropdown"
-                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Runs
-                    </a>
+                    <form>
+                        <a class="nav-link dropdown-toggle text-link" href="#" id="navbarDropdown"
+                           role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Runs
+                        </a>
+                    </form>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item text-link" href="#">Créer</a>
                         <a class="dropdown-item text-link" href="#">Liste des runs</a>
@@ -67,14 +62,50 @@
                 </li>
             </ul>
             <!-- Left element -->
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item text-container">
                     <a class="nav-link text-link" href="#">
                         Roland<img src="images/user.svg" class="user" alt="user">
                     </a>
-
                 </li>
             </ul>
+        </div>
+
+        <!-- Tablet Menu -->
+        <div class="dropdown tabletMenu">
+            <!-- Button -->
+            <a id="dropdownLabel" class="nav-link menuLink" data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false" href="#">
+                <img src="images/hamburger.svg" class="menuIcon align-middle" alt="menu">
+            </a>
+
+            <!-- Menu -->
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownLabel">
+                <a class="dropdown-item text-link" href="#">Roland<img src="images/user.svg" class="user" alt="user"></a>
+                <!-- dropdown -->
+                <div class="dropdown">
+                    <!-- Using the form allows to keep the dropdown open when clicking on the button-->
+                    <form>
+                        <a class="dropdown-item text-link" data-toggle="collapse" href="#subMenu" role="button"
+                           aria-expanded="false"
+                           aria-controls="filtersForm">
+                            Runs
+                        </a>
+                    </form>
+                    <div class="collapse" id="subMenu">
+                        <a class="dropdown-item text-link ml-2" href="createRun.html">Créer</a>
+                        <a class="dropdown-item text-link ml-2" href="runs.html">Liste des runs</a>
+                        <a class="dropdown-item text-link ml-2" href="#">Lieux de passage</a>
+                        <a class="dropdown-item text-link ml-2" href="#">Grand Affichage</a>
+                    </div>
+                </div>
+
+                <a class="dropdown-item text-link" href="#">Véhicules</a>
+                <a class="dropdown-item text-link" href="#">Chauffeurs</a>
+                <a class="dropdown-item text-link" href="#">Groupes</a>
+                <a class="dropdown-item text-link" href="#">Horaires</a>
+                <a class="dropdown-item text-link" href="#">Kiéla</a>
+            </div>
         </div>
     </nav>
 </header>
