@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="374a3aca-3653-4fd4-b60c-0c930ec260fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/runeo/menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runeo/menu2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runeo/scss/menu2.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runeo/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/runeo/menu.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,17 +42,18 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="P:\damik\Documents\ES\runeo\runeo" />
-      <recent name="P:\damik\Documents\ES\runeo\runeo\scss" />
-      <recent name="P:\Cours\GUI1\runeo\runeo\scss" />
-      <recent name="P:\Cours\GUI1\runeo\runeo" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="P:\Cours\GUI1\runeo\runeo\doc" />
       <recent name="P:\Cours\GUI1\runeo\runeo\images" />
       <recent name="P:\Cours\GUI1\runeo\runeo\autres" />
       <recent name="P:\Cours\GUI1\runeo\runeo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\proj\runeo\runeo" />
+      <recent name="C:\proj\runeo\runeo\scss" />
+      <recent name="P:\damik\Documents\ES\runeo\runeo" />
+      <recent name="P:\damik\Documents\ES\runeo\runeo\scss" />
+      <recent name="P:\Cours\GUI1\runeo\runeo\scss" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -96,7 +99,7 @@
       <workItem from="1573626245867" duration="1606000" />
       <workItem from="1573648200809" duration="78000" />
       <workItem from="1574060506474" duration="159000" />
-      <workItem from="1575305825088" duration="291000" />
+      <workItem from="1575305825088" duration="2629000" />
     </task>
     <servers />
   </component>

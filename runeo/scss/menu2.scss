@@ -1,0 +1,9 @@
+@import '_global';
+
+// main menu
+$menuTextColor: #f5f5f5;
+$menuBackgroundColor: $darkGrey;
+
+nav {
+  background-color: $menuBackgroundColor;
+}
