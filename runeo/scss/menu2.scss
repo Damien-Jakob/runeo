@@ -1,3 +1,6 @@
+// TODO menu icon animation
+// TODO tablet mode
+
 @import '_global';
 
 // text
@@ -15,23 +18,30 @@ nav {
 
   .text-container {
     padding: 0px 10px;
+
+    .text-link {
+      font-size: $fontSize;
+      font-weight: bold;
+
+      color: $menuTextColor;
+
+      img {
+        margin-left: 20px;
+      }
+
+      &:hover {
+        color: $menuBackgroundColor;
+        background-color: $menuTextColor;
+      }
+    }
   }
 
-  .text-link {
-    font-size: $fontSize;
-    font-weight: bold;
+  .dropdown-menu {
+    width: 300px;
 
     color: $menuTextColor;
-
-    img {
-      margin-left: 20px;
-    }
-
-    &:hover {
-      color: $menuBackgroundColor;
-      background-color: $menuTextColor;
-    }
-
-
+    background-color: $menuBackgroundColor;
+    border: none;
+    border-radius: 0px;
   }
 }

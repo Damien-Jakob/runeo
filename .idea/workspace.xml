@@ -31,7 +31,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SpNXxvCboAxOtpxwJFI9lluPma" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/runeo" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
@@ -101,7 +105,7 @@
       <workItem from="1573626245867" duration="1606000" />
       <workItem from="1573648200809" duration="78000" />
       <workItem from="1574060506474" duration="159000" />
-      <workItem from="1575305825088" duration="7129000" />
+      <workItem from="1575305825088" duration="8264000" />
     </task>
     <servers />
   </component>
@@ -118,5 +122,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
