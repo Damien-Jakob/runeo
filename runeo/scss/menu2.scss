@@ -9,4 +9,16 @@ $subMenuBackgroundColor: #1B1B1B;
 
 nav {
   background-color: $menuBackgroundColor;
+
+  a {
+    font-size: 20px;
+    font-weight: bold;
+
+    color: $menuTextColor;
+
+    &:hover {
+      color: $menuBackgroundColor;
+      background-color: $menuTextColor;
+    }
+  }
 }
