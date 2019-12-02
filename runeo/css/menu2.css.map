@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAMA,GAAI;EACF,gBAAgB,EAHI,OAAS",
+"mappings": "AASA,GAAI;EACF,gBAAgB,EANI,OAAS",
 "sources": ["../scss/menu2.scss"],
 "names": [],
 "file": "menu2.css"
