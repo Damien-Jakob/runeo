@@ -29,5 +29,7 @@ nav {
       display: none; } }
   nav .tabletMenu .dropdown-menu {
     top: 5px; }
+  nav .tabletMenu .subMenuItem {
+    margin-left: 10px; }
 
 /*# sourceMappingURL=menu2.css.map */
