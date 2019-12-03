@@ -5,6 +5,48 @@ nav {
   nav .user-container {
     display: flex;
     justify-content: space-between; }
+  nav .logoContainer {
+    height: 46px;
+    width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+    nav .logoContainer img {
+      transition: 0.3s ease; }
+      nav .logoContainer img.logo {
+        height: 40px; }
+        nav .logoContainer img.logo:hover {
+          height: 46px;
+          animation-name: bounceLogo;
+          animation-timing-function: ease-in-out;
+          animation-duration: 0.6s; }
+@keyframes bounceLogo {
+  from {
+    height: 40px; }
+  50% {
+    height: 46px; }
+  75% {
+    height: 43px; }
+  to {
+    height: 46px; } }
+      nav .logoContainer img.menuIcon {
+        height: 30px; }
+        nav .logoContainer img.menuIcon:hover {
+          height: 36px;
+          animation-name: bounceMenu;
+          animation-timing-function: ease-in-out;
+          animation-duration: 0.6s; }
+@keyframes bounceMenu {
+  from {
+    height: 30px; }
+  50% {
+    height: 36px; }
+  75% {
+    height: 33px; }
+  to {
+    height: 36px; } }
+      nav .logoContainer img.user, nav .logoContainer img.search {
+        height: 20px; }
   nav .text-link {
     font-size: 20px;
     font-weight: bold;

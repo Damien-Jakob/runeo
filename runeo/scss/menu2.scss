@@ -22,6 +22,89 @@ nav {
     justify-content: space-between;
   }
 
+  .logoContainer {
+    $logoHoverHeight: 46px;
+
+    height: $logoHoverHeight;
+    width: $logoHoverHeight;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    img {
+      // values for bounce animation
+      $bounceTiming: ease-in-out;
+      $bounceDuration: 0.6s;
+
+      transition: $bounceDuration/2 ease;
+
+      &.logo {
+        $height: 40px;
+        $hoverHeight: $logoHoverHeight;
+
+        height: $height;
+
+        &:hover {
+          height: $hoverHeight;
+
+          animation-name: bounceLogo;
+          animation-timing-function: $bounceTiming;
+          animation-duration: $bounceDuration;
+        }
+
+        @keyframes bounceLogo {
+          from {
+            height: $height;
+          }
+          50% {
+            height: $hoverHeight;
+          }
+          75% {
+            height: ($height + $hoverHeight) / 2;
+          }
+          to {
+            height: $hoverHeight;
+          }
+        }
+      }
+
+      &.menuIcon {
+        $height: 30px;
+        $hoverHeight: 36px;
+
+        height: $height;
+
+        &:hover {
+          height: $hoverHeight;
+
+          animation-name: bounceMenu;
+          animation-timing-function: $bounceTiming;
+          animation-duration: $bounceDuration;
+        }
+
+        @keyframes bounceMenu {
+          from {
+            height: $height;
+          }
+          50% {
+            height: $hoverHeight;
+          }
+          75% {
+            height: ($height + $hoverHeight) / 2;
+          }
+          to {
+            height: $hoverHeight;
+          }
+        }
+      }
+
+      &.user, &.search {
+        height: 20px;
+      }
+    }
+  }
+
   .text-link {
     font-size: $fontSize;
     font-weight: bold;
